@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>manager_user_nguyenanhtuan/</display-name>
+   <filter>
+        <filter-name>Login Filter</filter-name>
+        <filter-class>manageruser.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Login Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>manageruser.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>ListUserController</display-name>
+    <servlet-name>ListUserController</servlet-name>
+    <servlet-class>manageruser.controller.ListUserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListUserController</servlet-name>
+    <url-pattern>/ListUserController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>LogoutController</display-name>
+    <servlet-name>LogoutController</servlet-name>
+    <servlet-class>manageruser.controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/LogoutController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>SearchController</display-name>
+    <servlet-name>SearchController</servlet-name>
+    <servlet-class>manageruser.controller.SearchController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchController</servlet-name>
+    <url-pattern>/SearchController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>TopController</display-name>
+    <servlet-name>TopController</servlet-name>
+    <servlet-class>manageruser.controller.TopController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TopController</servlet-name>
+    <url-pattern>/TopController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>AddNewController</display-name>
+    <servlet-name>AddNewController</servlet-name>
+    <servlet-class>manageruser.controller.AddNewController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNewController</servlet-name>
+    <url-pattern>/AddNewController</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>

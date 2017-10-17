@@ -1,0 +1,26 @@
+table {
+		border-collapse: collapse;
+}
+
+table, th, td {
+		border: 1px solid black;
+}
+
+th, td {
+		padding: 0px 5px;
+}
+	
+span {
+		float: right;
+		margin: 5px;
+}
+
+ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+}
+
+li {
+		display: inline;
+}
