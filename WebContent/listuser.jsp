@@ -19,10 +19,10 @@
 		<div>
 			<img src="images/logo-manager-user.gif" alt="rikkeisoft"> 
 			<span>
-				<a href="${pageContext.request.contextPath}/TopController">
+				<a class="btn-link" href="${pageContext.request.contextPath}/TopController">
 					<button type="button" class="btn">Top</button> 
 				</a>
-				<a href="${pageContext.request.contextPath}/LogoutController">
+				<a class="btn-link" href="${pageContext.request.contextPath}/LogoutController">
 					<button type="button" class="btn">Log out</button>
 				</a>
 			</span>
@@ -69,12 +69,15 @@
 			<div class="form-group">
 				<div class="col-sm-offset-4">
 					<button type="submit" class="btn">Search</button>
-					<button type="submit" class="btn" formaction="AddNewController">Add</button>
+				<a class="btn-link" href="${pageContext.request.contextPath}/register.jsp">
+						<button type="button" class="btn">Add</button>
+				</a>	
+					
 				</div>
 			</div>
 
 		</form>
-
+		
 		<div>
 			<table>
 				<thead>

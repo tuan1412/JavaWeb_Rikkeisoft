@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <display-name>manager_user_nguyenanhtuan/</display-name>
-   <filter>
-        <filter-name>Login Filter</filter-name>
-        <filter-class>manageruser.filter.LoginFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>Login Filter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+  <filter>
+    <filter-name>Login Filter</filter-name>
+    <filter-class>manageruser.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Login Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -71,5 +71,13 @@
     <servlet-name>AddNewController</servlet-name>
     <url-pattern>/AddNewController</url-pattern>
   </servlet-mapping>
- 
+  <servlet>
+    <display-name>InsertController</display-name>
+    <servlet-name>InsertController</servlet-name>
+    <servlet-class>manageruser.controller.InsertController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertController</servlet-name>
+    <url-pattern>/InsertController</url-pattern>
+  </servlet-mapping>
 </web-app>

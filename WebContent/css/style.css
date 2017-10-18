@@ -24,3 +24,12 @@ ul {
 li {
 		display: inline;
 }
+
+a.btn-link : link {
+	text-decoration: none;
+	color: black;
+}
+
+a.btn-link : hover {
+	color: black;
+}
