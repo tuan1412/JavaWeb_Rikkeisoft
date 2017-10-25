@@ -133,11 +133,11 @@
 				<div class="col-sm-9">
 					<select id="nameLevel" class="form-control" name="nameLevel">
 						<option></option>
-						<option ${regForm.nameLevel == 'Trình độ tiếng nhật N1' ? 'selected' : ''}>Trình độ tiếng nhật N1</option>
-						<option ${regForm.nameLevel == 'Trình độ tiếng nhật N2' ? 'selected' : ''}>Trình độ tiếng nhật N2</option>
-						<option ${regForm.nameLevel == 'Trình độ tiếng nhật N3' ? 'selected' : ''}>Trình độ tiếng nhật N3</option>
-						<option ${regForm.nameLevel == 'Trình độ tiếng nhật N4' ? 'selected' : ''}>Trình độ tiếng nhật N4</option>
-						<option ${regForm.nameLevel == 'Trình độ tiếng nhật N5' ? 'selected' : ''}>Trình độ tiếng nhật N5</option>
+						<option ${regForm.nameLevel == 'Trình độ tiếng Nhật cấp 1' ? 'selected' : ''}>Trình độ tiếng Nhật cấp 1</option>
+						<option ${regForm.nameLevel == 'Trình độ tiếng Nhật cấp 2' ? 'selected' : ''}>Trình độ tiếng Nhật cấp 2</option>
+						<option ${regForm.nameLevel == 'Trình độ tiếng Nhật cấp 3' ? 'selected' : ''}>Trình độ tiếng Nhật cấp 3</option>
+						<option ${regForm.nameLevel == 'Trình độ tiếng Nhật cấp 4' ? 'selected' : ''}>Trình độ tiếng Nhật cấp 4</option>
+						<option ${regForm.nameLevel == 'Trình độ tiếng Nhật cấp 5' ? 'selected' : ''}>Trình độ tiếng Nhật cấp 5</option>
 					</select>
 				</div>
 			</div>
@@ -158,8 +158,8 @@
 					<select id="groupName" class="form-control" name="groupName">
 						<option></option>
 						<option ${regForm.groupName == 'Trung tâm phát triển chiến lược' ? 'selected' : ''}>Trung tâm phát triển chiến lược</option>
-						<option ${regForm.groupName == 'Trung tâm phát TMDT' ? 'selected' : ''}>Trung tâm phát triển TMDT</option>
-						<option ${regForm.groupName == 'Trung tâm phát triển hệ thống' ? 'selected' : ''}>Trung tâm phát triển hê thống</option>
+						<option ${regForm.groupName == 'Trung tâm phát triển TMDT' ? 'selected' : ''}>Trung tâm phát triển TMDT</option>
+						<option ${regForm.groupName == 'Trung tâm phát triển hê thống' ? 'selected' : ''}>Trung tâm phát triển hê thống</option>
 						<option ${regForm.groupName == 'Trung tâm phát triển mobie' ? 'selected' : ''}>Trung tâm phát triển mobile</option>
 						<option ${regForm.groupName == 'Trung tâm phát triển Game' ? 'selected' : ''}>Trung tâm phát triển Game</option>
 					</select>

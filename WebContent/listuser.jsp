@@ -120,7 +120,7 @@
 				<tbody>
 					<c:forEach items="${users}" var="user">
 						<tr>
-							<td>${user.userId}</td>
+							<td><a href="${pageContext.request.contextPath}/DetailController?userId=${user.userId}">${user.userId}</a></td>
 							<td>${user.fullName}</td>
 							<td>${user.fullNameKana}</td>
 							<td>${user.gender}</td>

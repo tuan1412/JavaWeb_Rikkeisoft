@@ -1,6 +1,8 @@
 package manageruser.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +39,10 @@ public class InsertController extends HttpServlet {
 		InsertService insertService = new InsertServiceImpl(regForm);
 		insertService.insert();
 		
-		response.sendRedirect(request.getContextPath() + "/ListUserController");
+		request.setAttribute("type", "Insert user");
+		request.setAttribute("des", "ListUserController");
+		RequestDispatcher view = request.getRequestDispatcher("success.jsp");
+		view.forward(request, response);
 	}
 
 }

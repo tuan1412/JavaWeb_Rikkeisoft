@@ -54,7 +54,7 @@ public class ListUserPagingImpl implements ListUser {
 				"from tbl_user natural join mst_japan natural join detail_user_japan natural join mst_group "+
 				"where full_name like ? and " +
                 "email like ? and " +
-                "group_name like ? " + 
+                "group_name like ? and del_flag = '0'" + 
                 "limit ?, ? ;"; 
 		
 		ResultSet resultSet = null;

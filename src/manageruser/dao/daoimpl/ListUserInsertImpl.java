@@ -55,19 +55,19 @@ public class ListUserInsertImpl implements ListUserInsert {
 		}
 		String nameLevel = "";
 		switch (regForm.getNameLevel()) {
-		case "Trình độ tiếng nhật N1":
+		case "Trình độ tiếng nhật cấp 1":
 			nameLevel = "N1";
 			break;
-		case "Trình độ tiếng nhật N2":
+		case "Trình độ tiếng nhật cấp 2":
 			nameLevel = "N2";
 			break;	
-		case "Trình độ tiếng nhật N3":
+		case "Trình độ tiếng nhật cấp 3":
 			nameLevel = "N3";
 			break;
-		case "Trình độ tiếng nhật N4":
+		case "Trình độ tiếng nhật cấp 4":
 			nameLevel = "N4";
 			break;
-		case "Trình độ tiếng nhật N5":
+		case "Trình độ tiếng nhật cấp 5":
 			nameLevel = "N5";
 			break;
 		

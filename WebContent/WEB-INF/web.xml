@@ -80,4 +80,37 @@
     <servlet-name>InsertController</servlet-name>
     <url-pattern>/InsertController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <display-name>DetailController</display-name>
+    <servlet-name>DetailController</servlet-name>
+    <servlet-class>manageruser.controller.DetailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetailController</servlet-name>
+    <url-pattern>/DetailController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EditController</servlet-name>
+    <servlet-class>manageruser.controller.EditController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditController</servlet-name>
+    <url-pattern>/EditController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SubmitEditController</servlet-name>
+    <servlet-class>manageruser.controller.SubmitEditController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitEditController</servlet-name>
+    <url-pattern>/SubmitEditController</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>DeleteController</servlet-name>
+    <servlet-class>manageruser.controller.DeleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteController</servlet-name>
+    <url-pattern>/DeleteController</url-pattern>
+  </servlet-mapping>
 </web-app>
