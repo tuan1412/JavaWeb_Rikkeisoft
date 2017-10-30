@@ -8,7 +8,7 @@ import manageruser.dao.DeleteUser;
 import manageruser.utils.ConnectionUtils;
 
 /**
- * Ket noi database, dat delflag user
+ * Ket noi database, update delflag user = 1
  * @author Chu lun Kute
  *
  */
@@ -45,10 +45,5 @@ public class DeleteUserImpl implements DeleteUser{
 			}
 			ConnectionUtils.closeConnection();
 		}
-	}
-	
-	public static void main(String[] args) {
-		DeleteUserImpl test = new DeleteUserImpl(14);
-		test.delete();
 	}
 }

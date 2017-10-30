@@ -39,6 +39,7 @@ public class ListUserPagingImpl implements ListUser {
 	@Override
 	public List<User> getUsers() {
 		Connection connection = ConnectionUtils.getConnection();
+		
 		List<User> users = new ArrayList<>();
 		fullName = "%" + fullName + "%";
 		email = "%" + email + "%";
@@ -82,7 +83,6 @@ public class ListUserPagingImpl implements ListUser {
 				user.setNameLevel(resultSet.getString("name_level"));
 				user.setEndDate(resultSet.getString("end_date"));
 				user.setTotal(resultSet.getInt("total"));
-
 				users.add(user);
 			}
 			
@@ -97,9 +97,5 @@ public class ListUserPagingImpl implements ListUser {
 			ConnectionUtils.closeConnection();
 		}			
 		return users;
-	}
-	public static void main(String[] args) {
-		ListUser test = new ListUserPagingImpl("", "", "", 0, 5);
-		test.getUsers().forEach(e->System.out.println(e.getFullName()));
 	}
 }

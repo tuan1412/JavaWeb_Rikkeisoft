@@ -1,6 +1,7 @@
 package manageruser.controller;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,16 +41,16 @@ public class LoginController extends HttpServlet {
      * Neu user ton tai, tao session
      */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		//lay thong tin tu form
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-
+		//goi service validate form	
 		LoginService loginService = new LoginServiceImpl();
 		List<String> errors = new ArrayList<>();
-		
 		errors = loginService.validate(username, password);
 		
+		//dieu huong 
 		if (errors.isEmpty()) {
 			HttpSession session = request.getSession(true);
 			session.setAttribute(Constant.LOGGED_IN_USER, username);

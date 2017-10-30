@@ -17,6 +17,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+        C:\Users\ETUK\eclipse-workspace\manager_user_nguyenanhtuan\WebContent\images
+      </param-value>
+  </context-param>
   <servlet>
     <display-name>LoginController</display-name>
     <servlet-name>LoginController</servlet-name>
@@ -63,13 +70,13 @@
     <url-pattern>/TopController</url-pattern>
   </servlet-mapping>
   <servlet>
-    <display-name>AddNewController</display-name>
-    <servlet-name>AddNewController</servlet-name>
-    <servlet-class>manageruser.controller.AddNewController</servlet-class>
+    <display-name>ValidateRegController</display-name>
+    <servlet-name>ValidateRegController</servlet-name>
+    <servlet-class>manageruser.controller.ValidateRegController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AddNewController</servlet-name>
-    <url-pattern>/AddNewController</url-pattern>
+    <servlet-name>ValidateRegController</servlet-name>
+    <url-pattern>/ValidateRegController</url-pattern>
   </servlet-mapping>
   <servlet>
     <display-name>InsertController</display-name>
@@ -105,12 +112,20 @@
     <servlet-name>SubmitEditController</servlet-name>
     <url-pattern>/SubmitEditController</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>DeleteController</servlet-name>
     <servlet-class>manageruser.controller.DeleteController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteController</servlet-name>
     <url-pattern>/DeleteController</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>ImageController</servlet-name>
+    <servlet-class>manageruser.controller.ImageController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageController</servlet-name>
+    <url-pattern>/images/*</url-pattern>
   </servlet-mapping>
 </web-app>

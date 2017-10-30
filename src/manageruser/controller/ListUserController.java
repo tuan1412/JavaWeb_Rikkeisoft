@@ -18,6 +18,8 @@ import manageruser.service.serviceimpl.PagingServiceOrderImpl;
 
 /**
  * Class nay de hien thi list user theo che do phan trang
+ * co chuc nang search
+ * sap xep theo cac truong
  * 
  * @author Chu lun Kute
  *
@@ -42,29 +44,33 @@ public class ListUserController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
-
+		
+		//nhan thong tin tu form search 
 		String fullName = session.getAttribute("fullName") != null ? (String) session.getAttribute("fullName") : "";
 		String email = session.getAttribute("email") != null ? (String) session.getAttribute("email") : "";
 		String groupName = session.getAttribute("fullName") != null ? (String) session.getAttribute("groupName") : "";
-
+		
+		//nhan thong tin truong sap xep
 		String sortType = request.getParameter("sortType") != null ? request.getParameter("sortType") : "";
 		String direction = request.getParameter("direction") != null ? request.getParameter("direction") : "";
-
+		
+		//xem trang hien tai
 		int page = (request.getParameter("page") != null) ? (page = Integer.parseInt(request.getParameter("page"))) : 1;
-
+		
+		//goi service phan trang
 		PagingService pagingService;
 		if ("".equals(sortType)) {
 			pagingService = new PagingServiceImpl(page, fullName, email, groupName);
 		} else {
 			pagingService = new PagingServiceOrderImpl(page, fullName, email, groupName, sortType, direction);
 		}
-
 		List<User> users = pagingService.getContentPage();
 		int noOfSection = pagingService.getNoOfSection();
 		int startPage = pagingService.getStartPage();
 		int endPage = pagingService.getEndPage();
 		int section = pagingService.getCurrentSection();
-
+        
+		//tra lai cac thuoc tinh vao trang jsp
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("currentPage", page);

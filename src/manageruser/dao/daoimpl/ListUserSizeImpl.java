@@ -35,7 +35,7 @@ public class ListUserSizeImpl implements ListUserSize {
 
 		String sql = "select count(user_id) "
 				+ "from tbl_user natural join mst_japan natural join detail_user_japan natural join mst_group "
-				+ "where full_name like ? and " + "email like ? and " + "group_name like ? ;";
+				+ "where full_name like ? and " + "email like ? and " + "group_name like ? and del_flag = 0;";
 		ResultSet resultSet = null;
 		PreparedStatement pstm = null;
 		int size = 0;

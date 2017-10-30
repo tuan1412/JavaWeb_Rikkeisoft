@@ -92,11 +92,11 @@ public class RegForm {
 	 * @param total the total to set
 	 */
 	public void setTotal(String total) {
-		if (total == null) {
+		if ("".equals(total)) {
 			this.total = 0;
-			return;
-		}
-		this.total = total != "" ? Integer.parseInt(total) : 0;
+		}else {
+			this.total = Integer.parseInt(total);
+	}
 	}
 	/**
 	 * @param groupName the groupName to set

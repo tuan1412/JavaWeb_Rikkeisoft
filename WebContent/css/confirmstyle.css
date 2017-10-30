@@ -1,33 +1,15 @@
-	body {
+.table-user-information>tbody>tr {
+	border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information>tbody>tr:first-child {
+	border-top: 0;
+}
+
+.table-user-information>tbody>tr>td {
+	border-top: 0;
+}
+
+body {
 	background-color: #eee;
-}
-
-	.wrapper{
-	max-width: 530px;
-	padding: 15px;
-	margin: 0 auto;
-	background-color: #fff;
-	border-radius: 0.3em;
-}
-
-	.wrapper h2 {
-		margin-left: 5em;
-		margin-bottom: 1em;
-	}
-	
-	table {
-		border-collapse: collapse;
-		margin: 0 auto;
-}
-
-	table, th, td {
-		border: 1px solid black;
-}
-
-	th, td {
-		padding: 0px 5px;
-}
-
-	button {
-		margin: auto;
 }

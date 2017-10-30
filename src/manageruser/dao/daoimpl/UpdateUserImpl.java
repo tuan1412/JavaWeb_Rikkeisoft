@@ -22,6 +22,7 @@ public class UpdateUserImpl implements UpdateUser{
 	@Override
 	public void update() {
 		Connection connection = ConnectionUtils.getConnection();
+		//chuan hoa du lieu
 		int groupId = 0;
 		int gender = 0;
 		switch (user.getGroupName()) {
@@ -60,6 +61,8 @@ public class UpdateUserImpl implements UpdateUser{
 			break;
 		
 		}
+		
+		//update co so du lieu
 		String sqlUser = "update tbl_user set " +
 					     "group_id = ?, " +
 					     "full_name = ?, " +

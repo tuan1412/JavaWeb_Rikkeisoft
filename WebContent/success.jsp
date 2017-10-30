@@ -25,7 +25,7 @@
 		var x = setInterval(function() {
 			countDownDate--;
 			document.getElementById("demo").innerHTML = countDownDate
-					+ 's để về trang list user';
+					+ 's để về trang ${des}';
 			if (countDownDate <= 1) {
 				clearInterval(x);
 			}

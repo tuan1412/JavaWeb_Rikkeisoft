@@ -1,54 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 <title>Login</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.input-group {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+</style>
 </head>
- 
+
 <body>
 	<c:if test="${not empty username}">
-		<c:redirect url="/ListUserController"/>	
+		<c:redirect url="/ListUserController" />
 	</c:if>
 	<div class="container">
 		<div class="row ">
-			<div class="col-sm-offset-4 col-sm-4">
-				<h1>Đăng nhập</h1>
-				
-				 <c:forEach items="${errors}" var="item">
-    				  <h4 style = "color: red"><c:out value="${item}" /></h4>
- 				 </c:forEach>
-				
+			<div class="col-sm-offset-4 col-sm-4 well">
+				<legend>Please Sign In</legend>
+				<c:if test="${not empty errors}">
+					<div class="alert alert-danger alert-dismissable">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+						<c:forEach items="${errors}" var="item">
+							<p>${item}</p>
+						</c:forEach>
+					</div>
+				</c:if>
 				<form method="post" action="LoginController">
-					<div class="form-group">
-						<label for="usr">Name:</label> 
-						<input type="text"
-							class="form-control" id="usr" name="username">
+					<div class="input-group">
+						<span class="input-group-addon"> <i
+							class="glyphicon glyphicon-user"></i>
+						</span> <input id="username" type="text" class="form-control"
+							name="username" placeholder="username">
 					</div>
-					<div class="form-group">
-						<label for="pwd">Password:</label>
-						 <input type="password"
-							class="form-control" id="pwd" name="password">
+					<div class="input-group">
+						<span class="input-group-addon"> <i
+							class="glyphicon glyphicon-lock"></i>
+						</span> <input id="password" type="password" class="form-control"
+							name="password" placeholder="password">
 					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<button type="submit" class="btn btn-primary btn-block">Submit</button>
-						</div>
-						<div class="col-sm-6">
-							<button type="reset" class="btn btn-danger btn-block">Reset</button>
-						</div>
-					</div>
+					<hr>
+					<button type="submit" class="btn btn-primary btn-block">Login</button>
 				</form>
 			</div>
 		</div>
 	</div>
 
 </body>
+
 </html>

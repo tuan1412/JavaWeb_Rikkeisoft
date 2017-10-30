@@ -34,6 +34,7 @@ public class ListUserInsertImpl implements ListUserInsert {
 	@Override
 	public void insert() {
 		Connection connection = ConnectionUtils.getConnection();
+		//chuan hoa lai data
 		int groupId = 0;
 		int gender = 0;
 		switch (regForm.getGroupName()) {
@@ -55,23 +56,25 @@ public class ListUserInsertImpl implements ListUserInsert {
 		}
 		String nameLevel = "";
 		switch (regForm.getNameLevel()) {
-		case "Trình độ tiếng nhật cấp 1":
+		case "Trình độ tiếng Nhật cấp 1":
 			nameLevel = "N1";
 			break;
-		case "Trình độ tiếng nhật cấp 2":
+		case "Trình độ tiếng Nhật cấp 2":
 			nameLevel = "N2";
 			break;	
-		case "Trình độ tiếng nhật cấp 3":
+		case "Trình độ tiếng Nhật cấp 3":
 			nameLevel = "N3";
 			break;
-		case "Trình độ tiếng nhật cấp 4":
+		case "Trình độ tiếng Nhật cấp 4":
 			nameLevel = "N4";
 			break;
-		case "Trình độ tiếng nhật cấp 5":
+		case "Trình độ tiếng Nhật cấp 5":
 			nameLevel = "N5";
 			break;
 		
 		}
+		
+		//insert co so du lieu
 		String sql = "insert into tbl_user(group_id, login_name, password, "
 					+ "full_name, full_name_kana, gender, "
 					+ "email, tel, birthday, link_image) "
@@ -127,8 +130,5 @@ public class ListUserInsertImpl implements ListUserInsert {
 			}
 			ConnectionUtils.closeConnection();
 		}
-	}
-	
-	
-	
+	}	
 }

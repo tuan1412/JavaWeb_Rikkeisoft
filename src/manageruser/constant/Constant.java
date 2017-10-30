@@ -14,4 +14,7 @@ public class Constant {
 	public final static String PASSWORD_ERROR = "Password không được để trống";
 	public final static String BOTH_ERROR = "Tài khoảng không tồn tại";
 	
+	public final static String IMAGES_SAVE_PATH = "C:\\Users\\ETUK\\eclipse-workspace\\manager_user_nguyenanhtuan\\WebContent\\images";
+
+	
 }

@@ -15,6 +15,7 @@ import manageruser.service.serviceimpl.InsertServiceImpl;
 
 /**
  * Insert them thanh vien
+ * dieu huong sang trang thong bao thanh cong
  */
 
 public class InsertController extends HttpServlet {
@@ -34,11 +35,16 @@ public class InsertController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//nhan thong tin tu form
 		HttpSession session = request.getSession();
 		RegForm regForm = (RegForm) session.getAttribute("regForm");
+		
+		//goi service insert user
 		InsertService insertService = new InsertServiceImpl(regForm);
 		insertService.insert();
+		session.removeAttribute("regForm");
 		
+		//dieu huong sang trang success
 		request.setAttribute("type", "Insert user");
 		request.setAttribute("des", "ListUserController");
 		RequestDispatcher view = request.getRequestDispatcher("success.jsp");
